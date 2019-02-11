@@ -7,10 +7,10 @@ jobs:
       - checkout
       - run:
           name: Get Models
-          command: bash download.bash
+          command: ./install.sh
       - run:
           name: install GRPC
-          command: python3.6 -m pip install grpcio grpcio-tools
+          command: python3.6 -m pip install -r requirements.txt
       - run:
           name: Generate GRPC files
           command: cd Service && python3.6 -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. edgedetect.proto
