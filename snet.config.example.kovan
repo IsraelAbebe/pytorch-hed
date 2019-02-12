@@ -1,5 +1,5 @@
 {
-   "DAEMON_END_POINT": "http://159.69.56.49:8001",
+   "DAEMON_END_POINT": "0.0.0.0:8001",
    "ETHEREUM_JSON_RPC_ENDPOINT": "https://kovan.infura.io",
    "IPFS_END_POINT": "http://ipfs.singularitynet.io:80",
    "REGISTRY_ADDRESS_KEY": "0xe331bf20044a5b24c1a744abc90c1fd711d2c08d",
