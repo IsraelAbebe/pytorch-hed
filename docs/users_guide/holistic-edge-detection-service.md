@@ -7,7 +7,7 @@
 
 ## Welcome
 
-This service provides age detection service for given images using pytorch frameworks based on the paper [Holistically-Nested Edge Detection](https://arxiv.org/abs/1504.06375).
+This service provides edge detection service for given images using pytorch frameworks based on the paper [Holistically-Nested Edge Detection](https://arxiv.org/abs/1504.06375).
 
 The main difference from Canny edge detection is that this approch provides better edge detection for training 
 since it picks up useful edges rather than providing all edges that exist and it reduces noice in that way.
