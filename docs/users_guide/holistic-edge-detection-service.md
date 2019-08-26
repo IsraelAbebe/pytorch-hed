@@ -17,7 +17,7 @@ since it picks up useful edges rather than providing all edges that exist and it
 - The historical artifact of image_type would be removed in the next major upgrade.
 - This image after being accepted would be then be converted to 480 * 320 like `cv2.resize(x, (480,320))`
 - The Holistic Edge Detector would do it job and provide us with an image that has is representation of the edges.
-- Image then will be converted to byte using 'PIL.Image.tobytes()'
+- Image then will be converted to image using 'base64.b64decode'.
 
 # Using the service on the platform
 The returned result has the following form:

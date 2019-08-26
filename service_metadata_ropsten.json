@@ -20,10 +20,11 @@
     "endpoints": [
         {
             "group_name": "default_group",
-            "endpoint": "http://159.69.56.49:8002"
+            "endpoint": "https://tz-services-1.snet.sh:8002"
         }
     ],
     "service_description": {
-        "description": "This service provides age detection service for given images using pytorch frameworks based on the paper [Holistically-Nested Edge Detection](https://arxiv.org/abs/1504.06375)."
+        "description": "This service provides age detection service for given images using pytorch frameworks based on the paper [Holistically-Nested Edge Detection](https://arxiv.org/abs/1504.06375).",
+        "url": "https://singnet.github.io/holistic-edge-detection-service/"
     }
 }

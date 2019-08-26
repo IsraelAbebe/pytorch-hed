@@ -11,9 +11,15 @@ import edgedetect
 class EdgedetectServicer(edgedetect_pb2_grpc.EdgedetectServicer):
     def DetectEdge(self, request, context):
         if request.image is None:
-            raise InvalidParams("Image is required")
-        if request.image_type is None:
-            raise InvalidParams("Image type is required")
+            context.set_code(grpc.StatusCode.INVALID_ARGUMENT)
+            context.set_details("Image is required")
+            return edgedetect_pb2.ImageFile()
+        if request.image == '':
+            context.set_code(grpc.StatusCode.INVALID_ARGUMENT)
+            context.set_details("Image is emtpy")
+            return edgedetect_pb2.ImageFile()
+
+        # TODO add validation by using python-magic if indeed the file sent is indeed an image type.
         response = edgedetect_pb2.ImageFile()
         response.image, response.image_type = edgedetect.detectedge(request.image, request.image_type)
         return response
